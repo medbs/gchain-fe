@@ -15,9 +15,21 @@ export interface Block {
   providedIn: 'root',
 })
 export class ChainService {
+  baseURL = 'http://localhost:8090/api/v1/ledger';
+
   constructor(private httpClient: HttpClient) {}
 
   getDataFromLedger(): Observable<any> {
-    return this.httpClient.get('http://localhost:8090/api/v1/ledger');
+    return this.httpClient.get(this.baseURL);
+  }
+
+  addDataToLedger() {
+    console.log('yey');
+    const headers = { 'content-type': 'application/json' };
+    return this.httpClient
+      .post<any>(this.baseURL + '?data=kek', null, { headers: headers })
+      .subscribe((data) => {
+        console.log('yey');
+      });
   }
 }
