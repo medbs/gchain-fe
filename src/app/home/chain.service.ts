@@ -23,13 +23,12 @@ export class ChainService {
     return this.httpClient.get(this.baseURL);
   }
 
-  addDataToLedger() {
-    console.log('yey');
+  addDataToLedger(x: string) {
+    const d = JSON.stringify(x);
+    console.log(d);
     const headers = { 'content-type': 'application/json' };
     return this.httpClient
-      .post<any>(this.baseURL + '?data=kek', null, { headers: headers })
-      .subscribe((data) => {
-        console.log('yey');
-      });
+      .post<any>(this.baseURL + '?data=' + d, null, { headers })
+      .subscribe((data) => {});
   }
 }
