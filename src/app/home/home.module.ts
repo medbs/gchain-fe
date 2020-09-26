@@ -6,7 +6,6 @@ import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { QuoteService } from './quote.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({

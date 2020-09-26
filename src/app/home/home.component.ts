@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
   getData() {
     this.chainService.getDataFromLedger().subscribe((data) => {
       this.blocks = data;
-      console.log(this.blocks);
     });
   }
 
