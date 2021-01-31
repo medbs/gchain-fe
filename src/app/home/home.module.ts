@@ -7,6 +7,7 @@ import { SharedModule } from '@shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
   ],
   declarations: [HomeComponent],
 })

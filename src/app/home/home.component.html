@@ -1,20 +1,27 @@
 <div class="container-fluid">
-  <div class="jumbotron text-center">
+  <div class="jumbotron-fluid text-center">
     <form [formGroup]="profileForm" (ngSubmit)="addData()">
       <label>
         Record:
         <input type="text" formControlName="record" />
       </label>
 
-      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+      <button
+        mat-raised-button
+        color="warn"
+        type="submit"
+        [disabled]="!profileForm.valid"
+      >
+        Submit
+      </button>
     </form>
 
-    <button (click)="getData()">Display Data</button>
+    <!--    <button (click)="getData()">Display Data</button>-->
   </div>
 </div>
 
 <div class="center">
-  <table class="table table-striped">
+  <table class="table table-borderless">
     <thead>
       <tr>
         <th>BPM</th>
